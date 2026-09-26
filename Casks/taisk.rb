@@ -12,7 +12,6 @@ cask "taisk" do
     strategy :github_latest
   end
 
-  depends_on cask: "ollama-app"
   depends_on macos: :monterey
 
   app "taisk.app"
@@ -26,8 +25,10 @@ cask "taisk" do
   zap trash: "~/Library/Application Support/taisk"
 
   caveats <<~EOS
-    On first launch, taisk shows a banner to pull two small Ollama models
-    (nomic-embed-text, qwen2.5:1.5b). Or run:
+    taisk needs Ollama and Claude Code. If you don't have Ollama:
+      brew install --cask ollama-app
+
+    Then pull the two small models taisk uses:
       ollama pull nomic-embed-text && ollama pull qwen2.5:1.5b
 
     taisk registers hooks in ~/.claude/settings.json. Quit taisk and remove the
