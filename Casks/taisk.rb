@@ -1,6 +1,6 @@
 cask "taisk" do
-  version "0.1.11"
-  sha256 "73cd87599b7cda5d1ee825957a636822ac8a61d6bebc758fa53df5ae9b876748"
+  version "0.1.12"
+  sha256 "20e526080316dcc55470e671946f5ed522b3e2943ab016d707877bbcdb82066b"
 
   url "https://github.com/omrico94/taisk/releases/download/v#{version}/taisk_#{version}_universal.dmg"
   name "taisk"
